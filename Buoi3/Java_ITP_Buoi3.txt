@@ -1,0 +1,53 @@
+i++ là toán tử tăng sau (post-increment), nghĩa là giá trị của i được sử dụng trước rồi mới tăng lên một đơn vị.
+++i là toán tử tăng trước (pre-increment), nghĩa là giá trị của i được tăng lên một đơn vị trước rồi mới được sử dụng.
+ví dụ : 
+    let j = 0;
+    do {
+        j++;
+    } while (j++ < 10);
+    console.log(j);
+    kết quả ra 12
+    
+continue bỏ qua bước lặp hiện tại, chuyển qua bước kế tiếp
+break: kết thúc vòng lặp 
+
+Vd: for (int k=0; k<10; k++)
+        print(k)
+        if k == 5
+            continue
+    print(k)  0 1 2 3 4 6 7 8 9 
+
+    for (int k=0; k<10; k++)
+        print(k)
+        if k == 5
+            break
+    print(k) 0 1 2 3 4
+
+*CLASS-OBJECT-METHOD-PROPERTY
+sử dụng triết lý lập trình hướng đối tượng oop => quy tất cả về class - object 
+
+class là khuôn mẫu để sản sinh ra các khuôn mẫu giống nhau về tính chất, khác nhau về số liệu chi triết
+    - thuộc tính
+    - constructor:
+        + hàm khởi tạo của lớp, dùng để sinh ra các đối tuwogj từ lớp tương ứng
+        + có nhiều dạng tham số
+            - không tham số
+            - đầy đủ
+            - tùy biến
+    - get/set
+    - toString
+object là bản thể đặc trưng cho 1 bộ chỉ số riêng biệt của các tính chất trong class
+    - PROPERTY: thuộc tính, mô tả cho các đặc tính/ thuộc tính của đối tượng
+    - METHOD: phương thức, mô tả cho hành vi, khả năng của đối tượng
+
+VD: class person
+    - thuộc tính nên có: 
+        + age
+        + name
+        + gender
+        + address
+    - constructor
+    - get/setter
+        +getName/setName
+    -toString
+        + đoạn text chứa thông số chi tiết của 1 object

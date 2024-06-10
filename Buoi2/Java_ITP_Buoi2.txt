@@ -1,0 +1,5 @@
+lớp để nhận đầu vào là lớp Scanner
+
+<kiểu dữ liệu > <tên biến> = new <kiểu dữ liệu>
+
+if đơn : if + đk
