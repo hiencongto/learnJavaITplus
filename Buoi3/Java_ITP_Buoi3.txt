@@ -51,3 +51,26 @@ VD: class person
         +getName/setName
     -toString
         + đoạn text chứa thông số chi tiết của 1 object
+
+*equals là phương thức có sẵn của lớp object
+mọi lớp đều là con của Object
+
+Phương thức trong java:
+-Cấu trúc
+    <access> <kiểu dữ liệu> <tên> (<tham số>){
+        <body>
+    }
+    
+
+- Tạo lớp Student có các thuộc tính:
+	+ name: String
+	+ age: int
+	+ gender: String
+	+ point: double
+- Tạo các phương thức getter/setter tương ứng
+- toString()
+
+- Tạo 3 đối tượng từ contructor full tham số
+- Hiển thị tên của học viên có điểm cao nhất
+- Hiển thị tên của học viên có giới tính "Nam"
+- Hiển thị thông tin của học viên có tuổi lớn nhất
