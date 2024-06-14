@@ -1,0 +1,39 @@
+accessmodifier là định nghĩa lập trình java, quy định về phạm vi truy cập của thành phần của lớp hđt
+
+OOP có 4 tính chất: bao gói, đa hình, kế thừa, trừu tượng
+
+*tính bao gói: chính là thể hiện đặc tính của accessmodifier, quy định phạm vi truy cập 
+    4 cấp độ:
+        - private: chỉ dùng trong lớp hiện tại 
+        - default: lhppng có từ khóa, chỉ sử dụng trong package hiện tại 
+        - protected chỉ dùng trong package hiện tại, muốn truy cập ngoài package phải là lớp con kế thừa 
+        - public: truy cập trên toàn bộ project
+
+final 
+static  
+abstract: đại diện cho trường tương, gắn với phương thức hoặc class, chuyển phương thức và class thành trừu tượng
+extends: từ khóa dùng trong kế thừa
+implements: triển khai, triển khai các phương thức trong lớp thuần trừu tượng <=> interface
+parameter: tham số, biến của phương thức, khai báo khi khai báo phương thức nếu có
+biến chứa giá trị mặc định: biến global 
+
+biến tham chiếu theo cơ chế stack - heap
+
+final phương thức -> không cho ghi đè
+final class -> không cho kế thừa 
+
+static: cho các thành phần có thể truy cập bởi lớp thay vì đối tượng
+public static void main(String[] args) {
+        // AccessModifier ac = new AccessModifier("a", "b", "c", "e", "d");
+        // System.out.println(AccessModifier.staticString);
+        System.out.println(AccessModifier.staticString);
+    }
+khi 1 biến static trong class, mỗi đối tượng mà thay đổi biến static thì các đối tượng trước đó cũng sẽ bị thay đổi theo
+        AccessModifier am = new AccessModifier("a", "b", "c", "d", "abc");
+        AccessModifier an = new AccessModifier("a", "b", "c", "d", "123");
+        System.out.println(AccessModifier.staticString);
+        => 123
+
+thành phần static có thể truy cập thành phần static nhưng không được non-static
+thành phần non-static có thể truy cập được cả 2
+lý do: static được tạo bởi lớp , hình thành cùng thời gain với lớp nên được tạo trước

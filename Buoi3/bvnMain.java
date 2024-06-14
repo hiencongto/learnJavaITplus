@@ -24,14 +24,18 @@ public class bvnMain {
 
         for (bvnStudent student_array : students_array) {
 
-            // check highest mark and set nam to nameStudentHighestMark
+            // check highest mark and set name to nameStudentHighestMark
             if (student_array.getPoint() > highestMark) {
                 highestMark = student_array.getPoint();
                 nameStudentHighestMark = student_array.getName();
             }
 
             // check gender is "Nam", add name to arraylist nameMale
-            if (student_array.getGender().equals("Nam")) {
+            // if (student_array.getGender().equals("Nam")) {
+            // nameMales.add(student_array.getName());
+            // }
+
+            if (student_array.isMale()) {
                 nameMales.add(student_array.getName());
             }
 

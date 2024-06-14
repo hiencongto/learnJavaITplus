@@ -49,11 +49,17 @@ public class bvnStudent {
         this.point = point;
     }
 
-    // print all student's informations
+    // checks if the provided gender string indicates male.
+    public boolean isMale() {
+        return this.gender.equals("Nam");
+    }
+
+    // return all student's informations
     public String toString() {
         String infomation = "Ten " + this.name + ", Tuoi " + this.age
                 + ", Gioi tinh " + this.gender + ", Diem so " + this.point;
 
         return infomation;
     }
+
 }
