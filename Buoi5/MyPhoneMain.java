@@ -1,11 +1,27 @@
 package learnJavaITplus.Buoi5;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MyPhoneMain {
 
+    public static ArrayList<MyPhone> createList() {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<MyPhone> myPhoneS = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            String name = sc.nextLine();
+            String brand = sc.nextLine();
+            int quantity = Integer.parseInt(sc.nextLine());
+            int price = Integer.parseInt(sc.nextLine());
+
+            myPhoneS.add(new MyPhone(name, brand, quantity, price));
+        }
+        return myPhoneS;
+    }
+
     // sort by quantity using bubble sort
-    public static ArrayList<MyPhone> displayByQuantity(ArrayList<MyPhone> myPhones) {
+    public static void displayByQuantity(ArrayList<MyPhone> myPhones) {
 
         for (int i = 0; i < myPhones.size() - 1; i++) {
             for (int j = 0; j < myPhones.size() - 1 - i; j++) {
@@ -17,10 +33,15 @@ public class MyPhoneMain {
                 }
             }
         }
-        return myPhones;
+
+        System.out.println("Sắp xếp tăng dần theo quantity");
+        for (MyPhone myPhone : myPhones) {
+            System.out.println(myPhone.toString());
+        }
 
     }
 
+    // print info of the highest-price and the lowest-price product
     public static void displayByPrice(ArrayList<MyPhone> myPhoneS) {
         int theHighestPrice = myPhoneS.get(0).getPrice();
         String infoHighestPrice = myPhoneS.get(0).toString();
@@ -29,9 +50,11 @@ public class MyPhoneMain {
 
         for (MyPhone myPhone : myPhoneS) {
             if (myPhone.getPrice() > theHighestPrice) {
+                theHighestPrice = myPhone.getPrice();
                 infoHighestPrice = myPhone.toString();
             }
             if (myPhone.getPrice() < theLowestPrice) {
+                theLowestPrice = myPhone.getPrice();
                 infoLowestPrice = myPhone.toString();
             }
         }
@@ -41,22 +64,29 @@ public class MyPhoneMain {
 
     }
 
+    public static void displayByBrand(ArrayList<MyPhone> myPhoneS) {
+        System.out.println("Sản phẩm thương hiệu samsung : ");
+        for (MyPhone myPhone : myPhoneS) {
+            if (myPhone.getBrand().equals("samsung")) {
+                System.out.println(myPhone.toString());
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
-        ArrayList<MyPhone> myPhoneS = new ArrayList<>();
+        // ArrayList<MyPhone> myPhoneS = new ArrayList<>();
 
-        myPhoneS.add(new MyPhone("iphone15", "apple", 50, 1000));
-        myPhoneS.add(new MyPhone("note24ultra", "samsung", 51, 950));
-        myPhoneS.add(new MyPhone("8X", "honor", 60, 700));
-        myPhoneS.add(new MyPhone("Reno", "oppo", 100, 750));
-        myPhoneS.add(new MyPhone("14ultra", "xiaomi", 200, 800));
+        // myPhoneS.add(new MyPhone("iphone15", "apple", 50, 1000));
+        // myPhoneS.add(new MyPhone("note24ultra", "samsung", 51, 950));
+        // myPhoneS.add(new MyPhone("Reno", "oppo", 100, 750));
+        // myPhoneS.add(new MyPhone("14ultra", "xiaomi", 200, 800));
+        // myPhoneS.add(new MyPhone("8X", "honor", 60, 700));
 
+        ArrayList<MyPhone> myPhoneS = createList();
         displayByPrice(myPhoneS);
+        displayByBrand(myPhoneS);
         displayByQuantity(myPhoneS);
-
-        for (MyPhone myPhone : myPhoneS) {
-            System.out.println(myPhone.toString());
-        }
 
     }
 }
