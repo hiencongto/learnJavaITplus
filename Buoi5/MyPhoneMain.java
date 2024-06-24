@@ -64,6 +64,7 @@ public class MyPhoneMain {
 
     }
 
+    // print info product that brand = samsung
     public static void displayByBrand(ArrayList<MyPhone> myPhoneS) {
         System.out.println("Sản phẩm thương hiệu samsung : ");
         for (MyPhone myPhone : myPhoneS) {
