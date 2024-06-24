@@ -12,7 +12,7 @@ public class FullTimeEmployee extends Employee implements Taxable {
     @Override
     public double calculateSalary() {
         // Giả sử mỗi tuần làm việc 4 tuần mỗi tháng
-        return baseSalary*4;
+        return baseSalary*weeklyHours*4;
     }
 
     @Override
