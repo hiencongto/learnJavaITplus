@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi2;
+package Buoi2;
 
 import java.util.Scanner;
 
@@ -11,18 +11,18 @@ public class Month_Day {
         int days = 0;
 
         switch (month) {
-            case 1: 
-            case 3: 
-            case 5: 
-            case 7: 
-            case 8: 
-            case 10: 
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
             case 12:
                 days = 31;
                 break;
-            case 4: 
-            case 6: 
-            case 9: 
+            case 4:
+            case 6:
+            case 9:
             case 11:
                 days = 30;
                 break;
@@ -36,9 +36,9 @@ public class Month_Day {
             default:
                 System.out.println("Số nhập vào không phải là một tháng hợp lệ.");
         }
-    
+
         if (days > 0) {
-            System.out.println("Tháng " + month + " năm " + year + " có " + days + " ngày");    
+            System.out.println("Tháng " + month + " năm " + year + " có " + days + " ngày");
         }
         sc.close();
     }

@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi6;
+package Buoi6;
 
 public class PartTimeEmployee extends Employee implements Taxable {
     private int weeklyHours;

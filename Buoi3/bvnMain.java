@@ -1,7 +1,6 @@
-package learnJavaITplus.Buoi3;
+package Buoi3;
 
 import java.util.ArrayList;
-import learnJavaITplus.Buoi3.bvnStudent;
 
 public class bvnMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Buoi6;
+package Buoi7;
 
 public interface Taxable {
     double calculateIncomeTax();

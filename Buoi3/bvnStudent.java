@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi3;
+package Buoi3;
 
 public class bvnStudent {
     private String name;

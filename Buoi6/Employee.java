@@ -1,4 +1,5 @@
-package learnJavaITplus.Buoi6;
+
+package Buoi6;
 
 public abstract class Employee {
     private String name;

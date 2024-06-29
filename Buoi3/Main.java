@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi3;
+package Buoi3;
 
 public class Main {
     public static void main(String[] args) {

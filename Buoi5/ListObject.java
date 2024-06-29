@@ -1,8 +1,8 @@
-package learnJavaITplus.Buoi5;
+package Buoi5;
 
 import java.util.ArrayList;
 import java.util.List;
-import learnJavaITplus.Buoi3.bvnStudent;
+import Buoi3.bvnStudent;
 
 public class ListObject {
     public static void main(String[] args) {

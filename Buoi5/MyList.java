@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi5;
+package Buoi5;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi2;
+package Buoi2;
 
 import java.util.Scanner;
 
@@ -10,19 +10,17 @@ public class SumAndFactorial {
         int sum = 0;
         int product = 1;
 
-        //Tinh tong
-        for (int i = 1; i <= num; i++)
-        {
-            sum +=i;
+        // Tinh tong
+        for (int i = 1; i <= num; i++) {
+            sum += i;
         }
-        System.err.println("Tổng là "+ sum);
+        System.err.println("Tổng là " + sum);
 
-        //Giai thừa
-        for (int i = 1; i <= num; i++)
-        {
+        // Giai thừa
+        for (int i = 1; i <= num; i++) {
             product *= i;
         }
-        System.err.println("Tích là "+product);
+        System.err.println("Tích là " + product);
 
     }
 }

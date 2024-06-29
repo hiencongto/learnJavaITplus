@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi6;
+package Buoi6;
 
 public class FullTimeEmployee extends Employee implements Taxable {
 

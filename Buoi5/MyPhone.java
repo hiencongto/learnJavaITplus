@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi5;
+package Buoi5;
 
 public class MyPhone {
     public String name;

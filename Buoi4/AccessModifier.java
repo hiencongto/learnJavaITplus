@@ -1,4 +1,4 @@
-package learnJavaITplus.Buoi4;
+package Buoi4;
 
 public class AccessModifier {
     private String access1;
