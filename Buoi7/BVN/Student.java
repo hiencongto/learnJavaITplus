@@ -1,6 +1,8 @@
 package Buoi7.BVN;
 
 public class Student {
+    private static int INDEX = 0;
+    private int id;
     private String name;
     private int age;
     private String gender;
@@ -9,16 +11,24 @@ public class Student {
     private Classroom classroom;
 
     public Student() {
-
     }
 
     public Student(String name, int age, String gender, String address, double pointAvg, Classroom classroom) {
+        this.id = ++INDEX;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.address = address;
         this.pointAvg = pointAvg;
         this.classroom = classroom;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -69,8 +79,10 @@ public class Student {
         this.classroom = classroom;
     }
 
+    @Override
     public String toString() {
-        return "Name: " + name + ", Age: " + age + ", Gender: " + gender + ", Address: " + address + ", PointAvg: "
-                + pointAvg + ", Classroom: " + classroom.getName();
+        return "Student [id=" + id + ", name=" + name + ", age=" + age + ", gender=" + gender + ", address=" + address
+                + ", pointAvg=" + pointAvg + ", classroom=" + classroom + "]";
     }
+
 }
