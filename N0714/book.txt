@@ -1,0 +1,5 @@
+101;Sach A;NXB1 
+102;Sach B;NXB2
+105;Sach D;NXB5
+104;Sach H;NXB4
+103;Sach G;NXB3

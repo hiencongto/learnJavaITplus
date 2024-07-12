@@ -91,12 +91,25 @@ public class PersonManager {
     }
 
     public void savePersonsToFile() {
+        // try {
+        // ObjectOutputStream obj = new ObjectOutputStream(new
+        // FileOutputStream("personList"));
+        // obj.writeObject(personList);
+        // System.out.println("Lưu thành công!");
+        // } catch (IOException e) {
+        // System.out.println("Lỗi khi lưu file: ");
+        // }
         try {
-            ObjectOutputStream obj = new ObjectOutputStream(new FileOutputStream("personList"));
-            obj.writeObject(personList);
-            System.out.println("Lưu thành công!");
-        } catch (IOException e) {
-            System.out.println("Lỗi khi lưu file: ");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("personList.csv"));
+            for (Person person : personList) {
+                String str = person.getId() + "," + person.getName() + "\n";
+                System.out.println(str);
+                bufferedWriter.write(str);
+                System.out.println("Lưu thành công!");
+            }
+            bufferedWriter.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -108,6 +121,19 @@ public class PersonManager {
             System.out.println("Hãy thử lại");
         }
         return null;
+        // ArrayList<Person> persons = new ArrayList<>();
+        // try {
+        // BufferedReader bufferedReader = new BufferedReader(new
+        // FileReader("personList.csv"));
+        // String str;
+        // while ((str = bufferedReader.readLine()) != null){
+        // String[] strs = str.split(",");
+        // persons.add(new Person());
+
+        // }
+        // } catch (Exception e) {
+        // // TODO: handle exception
+        // }
     }
 
 }
