@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+
+            if (num % 2 === 0 || num % 3 === 0) return false;
+
+            for (let i = 2; sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+
+            return true;
+        }
+
+        const userInput = prompt("Nhập một số:");
+        const number = parseInt(userInput);
+
+        if (isNaN(number)) {
+            document.getElementById('result').innerText = 'Thu lai'
+        } else {
+            if (isPrime(number)) {
+                document.getElementById('result').innerText =  'la so nguyen to'
+            } else {
+                document.getElementById('result').innerText = 'khong la so nguyen to'
+            }
+        }
+    </script>
+</body>
+</html>

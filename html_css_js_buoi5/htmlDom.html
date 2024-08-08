@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1 id="h11"></h1>
+    <input type="text" name="check" id="input1" placeholder="nhập option">
+    <select id="select1" name="select1">
+        <option value="option 1">option 1</option>
+        <option value="option 2">option 2</option>
+        <option value="option 3">option 3</option>
+        <option value="option 4">option 4</option>
+        <option value="option 5">option 5</option>
+    </select>
+    <button onclick="check()">Confirm</button>
+    <script>
+        let arr= []
+        for (let i = 0; i < 10; i++) {
+            let input = prompt("Nhập phần tử thứ " + (i + 1) + ":");
+            arr.push(Number(input)); 
+        }
+
+        var first = arr[0];
+        var second = -Infinity;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > first) {
+                second = first;
+                first = arr[i];
+            } else if (arr[i] > second && arr[i] !== first) {
+                second = arr[i];
+            }
+        }
+
+        console.log(arr);
+        console.log(first);
+        console.log(second);
+    </script>
+
+</body>
+</html>

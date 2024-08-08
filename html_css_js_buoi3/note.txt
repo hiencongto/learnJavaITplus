@@ -1,0 +1,5 @@
+- Biến:
+    - let: khai báo biến cục bộ, giới hạn trong block khai báo, không thể khai báo lại giá trị của biến
+        khi block kết thúc, biến let cũng sẽ biến mất
+    - var: khai báo biến toàn cục, cho phép khai báo lại biến, var sẽ tồn tại trong toàn bộ chương trình js mà nó khai báo
+    - const: hằng số
