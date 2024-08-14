@@ -1,4 +1,5 @@
-let arrProduct = []
+let arrProduct = [];
+let temp;
 
 function formCreatNewProduct(){
     let data = ""
@@ -23,6 +24,8 @@ function displayAllPrd() {
     let data = ""
     data+="<label><b>Add New Product</b></label>"
     data+="<button type='button' class='btn btn-success' onclick='formCreatNewProduct()'>Add</button>"
+    // data+="<input type='text' id='newProduct' name='newProduct' 'id='mrQuan'>"
+    // data+="<button type='button' class='btn btn-success onclick='mrQuan()' placeholder ="+temp+" value =="+temp+" >Edit</button>"
     data+="<p><b>Product Name</b></p>"
     data+="<table>"
     data+="<tr>"
@@ -40,12 +43,16 @@ function displayAllPrd() {
     document.getElementById("display").innerHTML = data;
 }
 
+
+
 function formEditProductName(index) {
     let data = ""
     data+="<label><b>Edit Product</b></label><br>"
     data+="<input type='text' id='newProductName' name='newProductName' value = '"+arrProduct[index]+"' placeholder = '"+arrProduct[index]+"'>"
     data+="<button type='button' class='btn btn-success' onclick='editProductName("+index+")'>Edit</button>"
     document.getElementById("display").innerHTML = data;
+    document.getElementById("mrQuan").placeholder = arrProduct[index];
+
 }
 
 function editProductName(index) {
